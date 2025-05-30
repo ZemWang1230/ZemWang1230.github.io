@@ -49,7 +49,7 @@ params:
       - 👻 Feel free to explore!
 
   assets:
-    # disableHLJS: true # to disable highlight.js
+    disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
     favicon: "favicon.ico"
     favicon16x16: "favicon.ico"
@@ -104,10 +104,10 @@ menu:
       name: Tag
       url: tags/
       weight: 20
-    - identifier: AuditReports
-      name: AuditReports
-      url: https://github.com/ZemWang1230/AuditReports/
-      weight: 25
+    # - identifier: AuditReports
+    #   name: AuditReports
+    #   url: https://github.com/ZemWang1230/AuditReports/
+    #   weight: 25
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
