@@ -1,0 +1,127 @@
+baseURL: "https://zemwang1230.github.io/"
+title: Zem's Home
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+# 优先展示的内容
+mainsections: ["posts"]
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Zem's Home
+  description: "None"
+  # keywords: [Blog, Web 3, Ethereum]
+  author: Zem
+  DateFormat: "January 2, 2006"
+  defaultTheme: light # dark, light
+
+  disableThemeToggle: false
+  # ShowShareButtons: true
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  # comments: false
+  # images: ["images/papermod-cover.png"]
+
+  homeInfoParams:
+    Title: "Zem's Home"
+    Content: >
+      👋 Welcome to my home!
+
+      - 👻 Feel free to explore!
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "favicon.ico"
+    favicon16x16: "favicon.ico"
+    favicon32x32: "favicon.ico"
+    apple_touch_icon: "favicon.ico"
+    safari_pinned_tab: "favicon.ico"
+  socialIcons:
+    - name: github
+      url: "https://github.com/ZemWang1230"
+    - name: x
+      url: "https://x.com/wwzzmming"
+    - name: telegram
+      url: "https://t.me/XXXWZMXXX"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+    includeMatches: true
+taxonomies: # 分类系统
+  tag: tags
+  series: series
+menu:
+  main:
+    - identifier: Archive
+      name: Archive
+      url: archives/
+      weight: 5
+    - identifier: Search
+      name: Search
+      url: search/
+      weight: 10
+    - identifier: Series
+      name: Series
+      url: series/
+      weight: 15
+    - identifier: Tag
+      name: Tag
+      url: tags/
+      weight: 20
+    - identifier: AuditReports
+      name: AuditReports
+      url: https://github.com/ZemWang1230/AuditReports/
+      weight: 25
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+
+outputs:
+  home:
+    - HTML # 生成的静态页面
+    - JSON # necessary for search, 这里的配置修改好之后，一定要重新生成一下
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # 可以 unsafe，有些 html 标签和样式可能需要
+  highlight:
+    anchorLineNos: false # 不要给行号设置锚标
+    guessSyntax: true
+    codeFences: true # 代码围栏
+    lineNos: true # 代码行
+    lineNumbersInTable: false # 不要设置成 true，否则如果文章开头是代码的话，摘要会由一大堆数字(即代码行号)开头文章
+    style: monokai
