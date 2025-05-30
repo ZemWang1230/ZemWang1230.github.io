@@ -12,6 +12,10 @@ pygmentsUseClasses: true
 # 优先展示的内容
 mainsections: ["posts"]
 
+caches:
+  images:
+    dir: :cacheDir/images
+
 minify:
   disableXML: true
   # minifyOutput: true
