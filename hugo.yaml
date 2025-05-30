@@ -12,9 +12,6 @@ pygmentsUseClasses: true
 # 优先展示的内容
 mainsections: ["posts"]
 
-caches:
-  images:
-    dir: :cacheDir/images
 
 minify:
   disableXML: true
@@ -62,6 +59,8 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/ZemWang1230"
+    - name: email
+      url: "zhemingwang123@gmail.com"
     - name: x
       url: "https://x.com/wwzzmming"
     - name: telegram
