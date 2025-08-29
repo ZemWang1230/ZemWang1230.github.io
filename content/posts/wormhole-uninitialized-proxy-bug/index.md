@@ -1,6 +1,6 @@
 ---
 date: '2025-07-12T07:04:53+08:00'
-title: 'Wormhole Uninitialized Proxy Bug Review'
+title: '[BugBounty Review]Wormhole Uninitialized Proxy'
 author: ["Zem"]
 summary: "管理员未执行UUPS模式下的initialize函数初始化，导致任何人可以通过Proxy合约调用Implementation合约的initialize函数，之后黑客可以通过升级成带有SELFDESTRUCT的恶意合约并自毁，使Proxy不能再升级且资金被永久锁定在Proxy合约中"
 tags: ["Solidity", "Wormhole", "Vulnerability", "UUPS", "TTP", "delegatecall"]
