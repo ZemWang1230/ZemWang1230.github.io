@@ -23,6 +23,22 @@ vm.deal(address(user), 1 ether);
 deal(address(ERC20token), address(user), 1 ether);
 ```
 
+发送余额：
+
+```solidity
+// ETH
+payable(userB).transfer(1 ether);
+```
+
+查看余额：
+
+```solidity
+// ETH
+address(user).balance;
+// ERC20
+token.balanceOf(address(user));
+```
+
 设置谁来调用:
 
 ```solidity
@@ -35,12 +51,15 @@ vm.startPrank(address(user), address(origin_user));
 vm.stopPrank();
 
 vm.prank(address(user)); // 设置下一次的调用为user
-vm.prank(address(user), address(origin_user))
+vm.prank(address(user), address(origin_user)) // 设置msg.sender=user，tx.origin=origin_user
+vm.prank(address(msgSender), bool(delegateCall)) // 若delegateCall为true，则下一次的delegatecall的msg.sender是msgSender
+vm.prank(address msgSender, address txOrigin, bool delegateCall)
 ```
 
 预期的revert:
 
 ```solidity
+// 需要写在调用函数的上面
 vm.expectRevert(); // 无论什么revert
 
 vm.expectRevert("err message"); // 只会承认revert输出字符串是"err message"的
