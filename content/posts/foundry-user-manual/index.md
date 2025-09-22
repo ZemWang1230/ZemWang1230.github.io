@@ -132,3 +132,13 @@ vm.roll(100);
 vm.fee(25 gwei);
 ```
 
+设置链上分叉：
+
+```solidity
+// 先在foundry.toml中写上rpc
+[rpc_endpoints]
+mainnet = "https://eth-mainnet.g.alchemy.com/v2/xxx"
+// 从指定区块分叉
+vm.createSelectFork("mainnet", 123456);
+// 从指定交易开始分叉，会回滚到该交易的区块，并重放之前的交易
+vm.createSelectFork("mainnet", bytes32(tx);
