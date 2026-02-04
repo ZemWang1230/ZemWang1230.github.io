@@ -41,6 +41,8 @@ params:
   # comments: false
   # images: ["images/papermod-cover.png"]
 
+  math: true
+
   homeInfoParams:
     Title: "Zem's Home"
     Content: >
