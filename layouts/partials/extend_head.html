@@ -1,0 +1,18 @@
+{{- if (cond .IsHome false .Params.math) }}
+{{ partial "math.html" . }}
+{{- end }}
+
+{{- /* webfont */ -}}
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.6.0/lxgwwenkailite-light.css"> -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.6.0/lxgwwenkailite-regular.css"> -->
+
+<!-- asynchronously load Google Fonts -->
+<!-- https://csswizardry.com/2020/05/the-fastest-google-fonts/#google-fonts-async-snippet -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif+SC&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif+SC&display=swap" media="print"
+    onload="this.media='all'" />
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif+SC&display=swap" />
+</noscript>
+{{- /* end */ -}}
