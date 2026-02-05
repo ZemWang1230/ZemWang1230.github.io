@@ -123,6 +123,19 @@ markup:
   goldmark:
     renderer:
       unsafe: true # 可以 unsafe，有些 html 标签和样式可能需要
+    # Add math compatibility
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
   highlight:
     anchorLineNos: false # 不要给行号设置锚标
     guessSyntax: true
