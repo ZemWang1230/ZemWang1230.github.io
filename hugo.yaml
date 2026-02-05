@@ -1,4 +1,6 @@
 baseURL: "https://zemwang1230.github.io/"
+DefaultContentLanguage: "zh"
+languageCode: en-us
 title: Zem's Home
 theme: PaperMod
 
@@ -15,7 +17,7 @@ mainsections: ["posts"]
 
 minify:
   disableXML: true
-  # minifyOutput: true
+  minifyOutput: true
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -38,6 +40,7 @@ params:
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true
+  math: true
   # comments: false
   # images: ["images/papermod-cover.png"]
 
@@ -104,10 +107,6 @@ menu:
       name: Tag
       url: tags/
       weight: 20
-    # - identifier: AuditReports
-    #   name: AuditReports
-    #   url: https://github.com/ZemWang1230/AuditReports/
-    #   weight: 25
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -116,6 +115,9 @@ outputs:
   home:
     - HTML # 生成的静态页面
     - JSON # necessary for search, 这里的配置修改好之后，一定要重新生成一下
+
+pagination:
+  pagerSize: 10
 
 markup:
   goldmark:
@@ -126,5 +128,6 @@ markup:
     guessSyntax: true
     codeFences: true # 代码围栏
     lineNos: true # 代码行
+    noClasses: false
     lineNumbersInTable: false # 不要设置成 true，否则如果文章开头是代码的话，摘要会由一大堆数字(即代码行号)开头文章
     style: monokai
