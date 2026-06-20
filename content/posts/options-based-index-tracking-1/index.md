@@ -3,7 +3,7 @@ date: '2026-06-17T19:09:36+08:00'
 title: 'PN稳定资产研究-01'
 author: ["Zem"]
 summary: "解读 Vitalik 关于用期权而非债务构建指数追踪资产的 P/N 方案，分析其如何绕开清算机制，以及 P、N、wrapper 在链上稳定敞口中的作用。"
-tags: ["DeFi", "Options", "Stable Assets"]
+tags: ["DeFi", "Options", "Stable-Assets"]
 series: ["PN稳定资产研究"]
 ---
 # 读懂 Vitalik 的 P/N 命题
