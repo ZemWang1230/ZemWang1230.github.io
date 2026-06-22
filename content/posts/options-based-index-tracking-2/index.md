@@ -72,7 +72,7 @@ max(0, ...)
 
 这意味着期权不会线性地跟随价格变化。它在某些区域没有价值，在另一些区域价值开始增长：
 
-![[images/Pasted image 20260621145647.png]]
+<img src="./images/Pasted image 20260621145647.png" alt="image-20260621145647" style="zoom:50%;" />
 
 这就是非线性 payoff；
 
